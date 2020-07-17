@@ -1,0 +1,116 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:shop_protection",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": true,
+            "animations": {
+                "shop_controller": "controller.animation.shop",
+                "purchase": "animation.shop.protection"
+            },
+            "scripts": {
+                "animate": [
+                    "shop_controller"
+                ]
+            }
+        },
+
+        "component_groups": {
+            "interactions_allowed": {
+
+                "minecraft:skin_id": {
+                    "value": 0
+                },
+                
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "deals_damage": false,
+                            "on_damage": {
+                                "event": "mobarenawq:interactions_denied",
+                                "filters": {
+                                    "all_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "player"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "deals_damage": false
+                        }
+                    ]
+                }
+
+            },
+            "interactions_denied": {
+
+                "minecraft:skin_id": {
+                    "value": 1
+                },
+                
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "deals_damage": false
+                        }
+                    ]
+                }
+
+            }
+        },
+
+        "components": {
+            "minecraft:nameable": {
+                "alwaysShow": true
+            },
+            "minecraft:physics": {
+                "has_gravity": false
+            },
+            "minecraft:scale": {
+                "value": 3
+            }
+        },
+
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "interactions_allowed"
+                    ]
+                }
+            },
+            
+            "mobarenawq:interactions_allowed": {
+                "add": {
+                    "component_groups": [
+                        "interactions_allowed"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "interactions_denied"
+                    ]
+                }
+            },
+
+            "mobarenawq:interactions_denied": {
+                "add": {
+                    "component_groups": [
+                        "interactions_denied"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "interactions_allowed"
+                    ]
+                }
+            }
+        }
+    }
+}

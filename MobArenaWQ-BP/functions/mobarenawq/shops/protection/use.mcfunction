@@ -1,0 +1,1 @@
+setblock 1019 24 1000 redstone_block

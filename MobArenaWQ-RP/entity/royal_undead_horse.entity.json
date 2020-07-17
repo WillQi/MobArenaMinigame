@@ -1,0 +1,22 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mobarenawq:royal_undead_horse",
+            "materials": {
+                "default": "horse"
+            },
+            "textures": {
+                "skeleton": "textures/entity/horses/regular",
+                "marking": "textures/entity/horses/markings/none",
+                "armor": "textures/entity/horses/armor/diamond"
+            },
+            "geometry": {
+                "default": "geometry.horse"
+            },
+            "render_controllers": [
+                "controller.render.horse"
+            ]
+        }
+    }
+}

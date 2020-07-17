@@ -1,0 +1,1 @@
+execute @a ~ ~ ~ playsound random.levelup @s

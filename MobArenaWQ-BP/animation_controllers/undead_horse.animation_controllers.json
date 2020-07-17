@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.undead_horse": {
+            "initial_state": "no_rider",
+            "states": {
+                "no_rider": {
+                    "on_entry": [
+                        "@s mobarenawq:lost_rider"
+                    ],
+                    "transitions": [
+                        { "has_rider": "query.has_rider" }
+                    ]
+                },
+                "has_rider": {
+                    "on_entry": [
+                        "@s mobarenawq:got_rider"
+                    ],
+                    "transitions": [
+                        { "no_rider": "!query.has_rider" }
+                    ]
+                }
+            }
+        }
+    }
+}

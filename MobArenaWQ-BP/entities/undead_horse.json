@@ -1,0 +1,152 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:undead_horse",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": true,
+            "animations": {
+                "horse_controller": "controller.animation.undead_horse",
+                "player_view": "controller.animation.player_view"
+            },
+            "scripts": {
+                "animate": [
+                    "horse_controller",
+                    "player_view"
+                ]
+            }
+        },
+
+
+        "component_groups": {
+            "has_rider": {
+                
+                "minecraft:behavior.avoid_mob_type": {
+                    "priority": 0,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_tag",
+                                        "subject": "other",
+                                        "value": "alive"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "max_dist": 5,
+                    "walk_speed_multiplier": 1.5,
+                    "sprint_speed_multiplier": 1.5
+                }
+
+            },
+            "no_rider": {
+                "minecraft:behavior.melee_attack": {
+                    "priority": 0
+                }
+            }
+        },
+
+        "components": {
+            "minecraft:physics": {},
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:movement.generic": {},
+            "minecraft:navigation.walk": {},
+            "minecraft:can_climb": {},
+            "minecraft:jump.static": {},
+            "minecraft:attack": {
+                "damage": 1
+            },
+            "minecraft:movement": {
+                "value": 0.35
+            },
+            "minecraft:rideable": {
+                "seats": {
+                    "position": [ 0.0, 0.8, -0.2 ]
+                },
+                "seat_count": 1,
+                "family_types": [
+                    "mobarenawq:rider"
+                ]
+            },
+            "minecraft:behavior.mount_pathing": {
+                "priority": 1
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "entity_types": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "value": "alive"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                }
+                            ]
+                        },
+                        "max_dist": 16
+                    }
+                ],
+                "must_see": true,
+                "priority": 2
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 3,
+                "interval": 120
+            }
+        },
+
+        "events": {
+
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "no_rider"
+                    ]
+                }
+            },
+
+            "mobarenawq:got_rider": {
+                "add": {
+                    "component_groups": [
+                        "has_rider"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "no_rider"
+                    ]
+                }
+            },
+
+            "mobarenawq:lost_rider": {
+                "add": {
+                    "component_groups": [
+                        "no_rider"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "has_rider"
+                    ]
+                }
+            }
+        }
+    }
+}

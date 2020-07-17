@@ -1,0 +1,41 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.necromancer": {
+            "initial_state": "timer",
+            "states": {
+                "timer": {
+                    "on_entry": [
+                        "@s mobarenawq:check_failed"
+                    ],
+                    "animations": [
+                        "timer"
+                    ],
+                    "transitions": [
+                        { "check": "query.skin_id == 1" }
+                    ]
+                },
+                "check": {
+                    "animations": [
+                        "check"
+                    ],
+                    "transitions": [
+                        { "timer": "query.has_target && query.anim_time > 1" },
+                        { "summon": "!query.has_target && query.anim_time > 1" }
+                    ]
+                },
+                "summon": {
+                    "on_entry": [
+                        "@s mobarenawq:start_summon"
+                    ],
+                    "animations": [
+                        "summon"
+                    ],
+                    "transitions": [
+                        { "timer": "query.skin_id == 0" }
+                    ]
+                }
+            }
+        }
+    }
+}

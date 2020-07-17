@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "MobArena - William Qi",
+        "description": "The resource pack for a spin off of the Mob Arena minigame in Mineplex",
+        "uuid": "aa0c7486-f40e-42ec-add2-723537c01453",
+        "version": [1, 1, 0],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "description": "The resources for the Mob Arena resource pack",
+            "type": "resources",
+            "uuid": "779cf2c5-f923-4a8b-83f4-5978638ffb14",
+            "version": [1, 1, 0]
+        }
+    ]
+}

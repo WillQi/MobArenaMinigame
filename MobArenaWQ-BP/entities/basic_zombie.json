@@ -1,0 +1,66 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:basic_zombie",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": true,
+            "animations": {
+                "player_view": "controller.animation.player_view"
+            },
+            "scripts": {
+                "animate": [
+                    "player_view"
+                ]
+            }
+        },
+        "components": {
+            "minecraft:physics": {},
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:movement.generic": {},
+            "minecraft:navigation.walk": {},
+            "minecraft:can_climb": {},
+            "minecraft:jump.static": {},
+            "minecraft:attack": {
+                "damage": 1.5
+            },
+            "minecraft:movement": {
+                "value": 0.25
+            },
+            "minecraft:behavior.melee_attack": {
+                "priority": 0
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "entity_types": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "value": "alive"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                }
+                            ]
+                        },
+                        "max_dist": 16
+                    }
+                ],
+                "must_see": true,
+                "priority": 1
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 2,
+                "interval": 120
+            }
+        }
+    }
+}

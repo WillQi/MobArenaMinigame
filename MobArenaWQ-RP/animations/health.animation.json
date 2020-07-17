@@ -1,0 +1,20 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.health.idle": {
+			"loop": true,
+			"animation_length": 2.08,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5167": [0, 90, 0],
+						"1.0333": [0, 180, 0],
+						"1.5667": [0, 270, 0],
+						"2.0833": [0, 360, 0]
+					}
+				}
+			}
+		}
+	}
+}

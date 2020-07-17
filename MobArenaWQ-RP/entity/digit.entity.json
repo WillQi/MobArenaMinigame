@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mobarenawq:digit",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/digit"
+            },
+            "geometry": {
+                "default": "geometry.digit"
+            },
+            "render_controllers": [
+                "controller.render.digit"
+            ]
+        }
+    }
+}

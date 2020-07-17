@@ -1,0 +1,82 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:basic_skeleton",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": true,
+            "animations": {
+                "player_view": "controller.animation.player_view"
+            },
+            "scripts": {
+                "animate": [
+                    "player_view"
+                ]
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "mobarenawq:rider"
+                ]
+            },
+            "minecraft:physics": {},
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:movement": {
+                "value": 0.25
+            },
+            "minecraft:equipment": {
+                "table": "loot_tables/entities/skeleton.json"
+            },
+            "minecraft:movement.generic": {},
+            "minecraft:navigation.walk": {},
+            "minecraft:can_climb": {},
+            "minecraft:jump.static": {},
+            "minecraft:shooter": {
+                "def": "mobarenawq:modified_arrow"
+            },
+
+            "minecraft:behavior.ranged_attack": {
+                "priority": 0,
+                "attack_interval_min": 2,
+                "attack_interval_max": 3,
+                "attack_radius": 15
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "entity_types": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "value": "alive"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                }
+                            ]
+                        },
+                        "max_dist": 16
+                    }
+                ],
+                "must_see": true,
+                "priority": 1
+            },
+            "minecraft:behavior.find_mount": {
+                "priority": 2,
+                "within_radius": 16
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 3,
+                "interval": 120
+            }
+        }
+    }
+}

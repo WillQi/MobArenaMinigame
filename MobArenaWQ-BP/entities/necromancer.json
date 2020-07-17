@@ -1,0 +1,148 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:necromancer",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": true,
+            "animations": {
+                "summon_controller": "controller.animation.necromancer",
+                "player_view": "controller.animation.player_view",
+
+                "timer": "animation.necromancer.timer",
+                "check": "animation.necromancer.check",
+                "summon": "animation.necromancer.summon"
+            },
+            "scripts": {
+                "animate": [
+                    "summon_controller",
+                    "player_view"
+                ]
+            }
+        },
+
+        "component_groups": {
+
+            "summon": {
+                "minecraft:skin_id": {
+                    "value": 2
+                }
+            },
+
+            "check": {
+                "minecraft:skin_id": {
+                    "value": 1
+                },
+
+                "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 0,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "mobarenawq:necromancer_summon"
+                                    }
+                                ]
+                            },
+                            "max_dist": 5
+                        }
+                    ],
+                    "reselect_targets": true
+                }
+            },
+
+            "can_move": {
+                "minecraft:skin_id": {
+                    "value": 0
+                },
+                "minecraft:movement.generic": {},
+                "minecraft:navigation.walk": {},
+                "minecraft:can_climb": {},
+                "minecraft:jump.static": {},
+                "minecraft:movement": {
+                    "value": 0.35
+                },
+                "minecraft:behavior.random_stroll": {
+                    "priority": 1,
+                    "interval": 120
+                }
+            }
+
+        },
+
+        "components": {
+            "minecraft:physics": {},
+            "minecraft:health": {
+                "value": 12,
+                "max": 12
+            }
+        },
+
+        "events": {
+
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "can_move"
+                    ]
+                }
+            },
+
+            "mobarenawq:start_summon": {
+                "add": {
+                    "component_groups": [
+                        "summon"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "check"
+                    ]
+                }
+            },
+
+            "mobarenawq:stop_summon": {
+                "add": {
+                    "component_groups": [
+                        "can_move"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "summon"
+                    ]
+                }
+            },
+
+            "mobarenawq:check": {
+                "add": {
+                    "component_groups": [
+                        "check"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "can_move"
+                    ]
+                }
+            },
+
+            "mobarenawq:check_failed": {
+                "remove": {
+                    "component_groups": [
+                        "check"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "can_move"
+                    ]
+                }
+            }
+        }
+    }
+}

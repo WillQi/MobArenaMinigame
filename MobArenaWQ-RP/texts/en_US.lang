@@ -1,0 +1,64 @@
+entity.mobarenawq:baby_zombie_knight.name=Baby Zombie Knight
+item.spawn_egg.entity.mobarenawq:baby_zombie_knight.name=Spawn Baby Zombie Knight [MA-WQ]
+
+entity.mobarenawq:baby_zombie.name=Basic Zombie
+item.spawn_egg.entity.mobarenawq:baby_zombie.name=Spawn Baby Zombie [MA-WQ]
+
+entity.mobarenawq:basic_skeleton.name=Basic Skeleton
+item.spawn_egg.entity.mobarenawq:basic_skeleton.name=Spawn Skeleton [MA-WQ]
+
+entity.mobarenawq:basic_zombie.name=Basic Zombie
+item.spawn_egg.entity.mobarenawq:basic_zombie.name=Spawn Basic Zombie [MA-WQ]
+
+entity.mobarenawq:cursed_arrow_marker.name=Cursed Arrow Marker
+item.spawn_egg.entity.mobarenawq:cursed_arrow_marker.name=Spawn Cursed Arrow Marker [MA-WQ]
+
+entity.mobarenawq:cursed_necromancer.name=Cursed Necromancer
+item.spawn_egg.entity.mobarenawq:cursed_necromancer.name=Spawn Cursed Necromancer [MA-WQ]
+
+entity.mobarenawq:necromancer.name=Necromancer
+item.spawn_egg.entity.mobarenawq:necromancer.name=Spawn Necromancer [MA-WQ]
+
+entity.mobarenawq:royal_archer.name=Royal Archer
+item.spawn_egg.entity.mobarenawq:royal_archer.name=Spawn Royal Archer [MA-WQ]
+
+entity.mobarenawq:royal_knight.name=Royal Knight
+item.spawn_egg.entity.mobarenawq:royal_knight.name=Spawn Royal Knight [MA-WQ]
+
+entity.mobarenawq:royal_undead_horse.name=Royal Undead Horse
+item.spawn_egg.entity.mobarenawq:royal_undead_horse.name=Spawn Royal Undead Horse [MA-WQ]
+
+entity.mobarenawq:shop_haste.name=Haste Shop
+item.spawn_egg.entity.mobarenawq:shop_haste.name=Spawn Haste Shop [MA-WQ]
+
+entity.mobarenawq:shop_health.name=Health Shop
+item.spawn_egg.entity.mobarenawq:shop_health.name=Spawn Health Shop [MA-WQ]
+
+entity.mobarenawq:shop_protection.name=Protection Shop
+item.spawn_egg.entity.mobarenawq:shop_protection.name=Spawn Protection Shop [MA-WQ]
+
+entity.mobarenawq:shop_sharpness.name=Sharpness Shop
+item.spawn_egg.entity.mobarenawq:shop_sharpness.name=Spawn Sharpness Shop [MA-WQ]
+
+entity.mobarenawq:skeleton_archer.name=Skeleton Archer
+item.spawn_egg.entity.mobarenawq:skeleton_archer.name=Spawn Skeleton Archer [MA-WQ]
+
+entity.mobarenawq:undead_horse.name=Undead Horse
+item.spawn_egg.entity.mobarenawq:undead_horse.name=Spawn Undead Horse [MA-WQ]
+
+entity.mobarenawq:undead_king.name=Undead King
+item.spawn_egg.entity.mobarenawq:undead_king.name=Spawn Undead King [MA-WQ]
+
+entity.mobarenawq:unholy_archer.name=Unholy Archer
+item.spawn_egg.entity.mobarenawq:unholy_archer.name=Spawn Unholy Archer [MA-WQ]
+
+entity.mobarenawq:unholy_arrow.name=Unholy Arrow
+entity.mobarenawq:modified_arrow.name=Arrow
+
+entity.mobarenawq:unholy_zombie.name=Unholy Zombie
+item.spawn_egg.entity.mobarenawq:unholy_zombie.name=Spawn Unholy Zombie [MA-WQ]
+
+entity.mobarenawq:zombie_knight.name=Zombie Knight
+item.spawn_egg.entity.mobarenawq:zombie_knight.name=Spawn Zombie Knight [MA-WQ]
+
+item.mobarenawq:golden_apple.name=Golden Apple

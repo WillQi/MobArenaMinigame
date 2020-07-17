@@ -1,0 +1,251 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:undead_king",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": true,
+            "animations": {
+                "battle_controller": "controller.animation.undead_king.battle",
+
+                "next_attack_cursed_arise": "animation.undead_king.next_attack_cursed_arise",
+                "attack_cursed_arise": "animation.undead_king.attack_cursed_arise",
+                "next_attack_perish": "animation.undead_king.next_attack_perish",
+                "attack_perish": "animation.undead_king.attack_perish",
+                "next_attack_royal_arise": "animation.undead_king.next_attack_royal_arise",
+                "attack_royal_arise": "animation.undead_king.attack_royal_arise",
+                "next_attack_writh": "animation.undead_king.next_attack_writh",
+                "attack_writh": "animation.undead_king.attack_writh"
+            
+            },
+            "scripts": {
+                "animate": [
+                    "battle_controller"
+                ]
+            }
+        },
+
+        "component_groups": {
+
+            "knockback_attack": {
+                "minecraft:behavior.knockback_roar": {
+                    "priority": 0,
+                    "attack_time": 0.5,
+                    "cooldown_time": 0,
+                    "duration": 1,
+                    "knockback_damage": 2,
+                    "knockback_range": 32,
+                    "knockback_strength": 8
+                }
+            },
+
+            "next_attack_cursed_arise": {
+                "minecraft:skin_id": {
+                    "value": 0
+                }
+            },
+
+            "attack_cursed_arise": {
+                "minecraft:skin_id": {
+                    "value": 1
+                }
+            },
+
+            "next_attack_perish": {
+                "minecraft:skin_id": {
+                    "value": 2
+                }
+            },
+
+            "attack_perish": {
+                "minecraft:skin_id": {
+                    "value": 3
+                }
+            },
+
+            "next_attack_royal_arise": {
+                "minecraft:skin_id": {
+                    "value": 4
+                }
+            },
+
+            "attack_royal_arise": {
+                "minecraft:skin_id": {
+                    "value": 5
+                }
+            },
+
+            "next_attack_writh": {
+                "minecraft:skin_id": {
+                    "value": 6
+                }
+            },
+
+            "attack_writh": {
+                "minecraft:skin_id": {
+                    "value": 7
+                }
+            }
+
+        },
+        
+        
+        "components": {
+
+            "minecraft:physics": {},
+
+            "minecraft:health": {
+                "value": 1250,
+                "max": 1250
+            },
+
+            "minecraft:boss": {
+                "name": "§c§lThe Undead King§r"
+            },
+
+            "minecraft:knockback_resistance": {
+                "value": 100
+            },
+
+            "minecraft:scale": {
+                "value": 5
+            }
+
+        },
+
+
+        "events": {
+            
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "attack_cursed_arise"
+                    ]
+                }
+            },
+        
+            "mobarenawq:add_knockback_attack": {
+                "add": {
+                    "component_groups": [
+                        "knockback_attack"
+                    ]
+                }
+            },
+
+            "mobarenawq:remove_knockback_attack": {
+                "remove": {
+                    "component_groups": [
+                        "knockback_attack"
+                    ]
+                }
+            },
+
+            "mobarenawq:attack_cursed_arise": {
+                "add": {
+                    "component_groups": [
+                        "attack_cursed_arise"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "next_attack_arise"
+                    ]
+                }
+            },
+
+            "mobarenawq:next_attack_perish": {
+                "add": {
+                    "component_groups": [
+                        "next_attack_perish"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "attack_cursed_arise"
+                    ]
+                }
+            },
+
+            "mobarenawq:attack_perish": {
+                "add": {
+                    "component_groups": [
+                        "attack_perish"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "next_attack_perish"
+                    ]
+                }
+            },
+
+            "mobarenawq:next_attack_royal_arise": {
+                "add": {
+                    "component_groups": [
+                        "next_attack_royal_arise"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "attack_perish"
+                    ]
+                }
+            },
+
+            "mobarenawq:attack_royal_arise": {
+                "add": {
+                    "component_groups": [
+                        "attack_royal_arise"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "next_attack_royal_arise"
+                    ]
+                }
+            },
+
+            "mobarenawq:next_attack_writh": {
+                "add": {
+                    "component_groups": [
+                        "next_attack_writh"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "attack_royal_arise"
+                    ]
+                }
+            },
+
+            "mobarenawq:attack_writh": {
+                "add": {
+                    "component_groups": [
+                        "attack_writh"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "next_attack_writh"
+                    ]
+                }
+            },
+
+            "mobarenawq:next_attack_cursed_arise": {
+                "add": {
+                    "component_groups": [
+                        "next_attack_cursed_arise"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "attack_writh"
+                    ]
+                }
+            }
+
+        }
+
+    }
+}

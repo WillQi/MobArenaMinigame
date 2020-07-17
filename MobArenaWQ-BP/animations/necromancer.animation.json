@@ -1,0 +1,79 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.necromancer.timer": {
+            "animation_length": 6,
+            "loop": false,
+            "timeline": {
+                "5.0": [
+                    "@s mobarenawq:check"
+                ]
+            }
+        },
+        "animation.necromancer.check": {
+            "animation_length": 3,
+            "loop": false,
+            "timeline": {
+                "0.0": [
+                    "@s mobarenawq:check"
+                ]
+            }
+        },
+        "animation.necromancer.summon": {
+            "animation_length": 8,
+            "loop": false,
+            "timeline": {
+
+                "1.0": [
+                    "/particle mobarenawq:modified_evoker_spell ~2 ~ ~",
+                    "/particle mobarenawq:modified_evoker_spell ~-2 ~ ~",
+                    "/particle mobarenawq:modified_evoker_spell ~ ~ ~2",
+                    "/particle mobarenawq:modified_evoker_spell ~ ~ ~-2"
+                ],
+
+                "5.2": [
+                    "/particle minecraft:large_explosion ~2 ~ ~",
+                    "/particle minecraft:large_explosion ~-2 ~ ~",
+                    "/particle minecraft:large_explosion ~ ~ ~2",
+                    "/particle minecraft:large_explosion ~ ~ ~-2",
+                    "/summon mobarenawq:zombie_knight ~2 ~ ~",
+                    "/summon mobarenawq:zombie_knight ~-2 ~ ~",
+                    "/summon mobarenawq:skeleton_archer ~ ~ ~2",
+                    "/summon mobarenawq:skeleton_archer ~ ~ ~-2"
+                ],
+
+                "7.5": [
+                    "@s mobarenawq:stop_summon"
+                ]
+            }
+        },
+        "animation.necromancer.cursed_summon": {
+            "animation_length": 8,
+            "loop": false,
+            "timeline": {
+
+                "1.0": [
+                    "/particle mobarenawq:modified_lava_particle ~2 ~ ~",
+                    "/particle mobarenawq:modified_lava_particle ~-2 ~ ~",
+                    "/particle mobarenawq:modified_lava_particle ~ ~ ~2",
+                    "/particle mobarenawq:modified_lava_particle ~ ~ ~-2"
+                ],
+
+                "5.2": [
+                    "/particle minecraft:large_explosion ~2 ~ ~",
+                    "/particle minecraft:large_explosion ~-2 ~ ~",
+                    "/particle minecraft:large_explosion ~ ~ ~2",
+                    "/particle minecraft:large_explosion ~ ~ ~-2",
+                    "/summon mobarenawq:royal_knight ~2 ~ ~",
+                    "/summon mobarenawq:royal_knight ~-2 ~ ~",
+                    "/summon mobarenawq:royal_archer ~ ~ ~2",
+                    "/summon mobarenawq:royal_archer ~ ~ ~-2"
+                ],
+
+                "7.5": [
+                    "@s mobarenawq:stop_summon"
+                ]
+            }
+        }
+    }
+}

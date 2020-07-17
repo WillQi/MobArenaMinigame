@@ -1,0 +1,1 @@
+setblock 998 4 970 redstone_block

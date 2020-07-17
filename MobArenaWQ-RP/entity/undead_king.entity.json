@@ -1,0 +1,30 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mobarenawq:undead_king",
+            "materials": {
+                "default": "skeleton"
+            },
+            "textures": {
+                "default": "textures/entity/undead_king"
+            },
+            "geometry": {
+                "default": "geometry.skeleton"
+            },
+            "render_controllers": [
+                "controller.render.undead_king"
+            ],
+            "animations": {
+                "arise": "animation.undead_king.arise",
+                "perish": "animation.undead_king.perish",
+                "writh": "animation.undead_king.writh"
+            },
+            "animation_controllers": [
+                { "arise": "controller.animation.undead_king.arise" },
+                { "perish": "controller.animation.undead_king.perish" },
+                { "writh": "controller.animation.undead_king.writh" }
+            ]
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.undead_king.arise": {
+            "initial_state": "waiting",
+            "states": {
+                "waiting": {
+                    "transitions": [
+                        { "attack": "query.skin_id == 1 || query.skin_id == 5" }
+                    ]
+                },
+                "attack": {
+                    "animations": [
+                        "arise"
+                    ],
+                    "transitions": [
+                        { "waiting": "query.skin_id != 5 && query.skin_id != 1" }
+                    ]
+                }
+            }
+        },
+        "controller.animation.undead_king.writh": {
+            "initial_state": "waiting",
+            "states": {
+                "waiting": {
+                    "transitions": [
+                        { "attack": "query.skin_id == 3" }
+                    ]
+                },
+                "attack": {
+                    "animations": [
+                        "writh"
+                    ],
+                    "transitions": [
+                        { "waiting": "query.skin_id != 3" }
+                    ]
+                }
+            }
+        },
+        "controller.animation.undead_king.perish": {
+            "initial_state": "waiting",
+            "states": {
+                "waiting": {
+                    "transitions": [
+                        { "attack": "query.skin_id == 7" }
+                    ]
+                },
+                "attack": {
+                    "animations": [
+                        "perish"
+                    ],
+                    "transitions": [
+                        { "waiting": "query.skin_id != 7" }
+                    ]
+                }
+            }
+        }
+    }
+}

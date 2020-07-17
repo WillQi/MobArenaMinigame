@@ -1,0 +1,8 @@
+{
+    "resource_pack_name": "mobarenawq",
+    "texture_data": {
+        "golden_apple": {
+            "textures": "textures/items/golden_apple"
+        }
+    }
+}

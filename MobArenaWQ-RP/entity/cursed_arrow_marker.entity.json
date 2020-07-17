@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mobarenawq:cursed_arrow_marker",
+
+            "materials": {
+                "default": "entity"
+            },
+            
+            "geometry": {
+                "default": "geometry.cursed_arrow_marker"
+            },
+
+            "textures": {
+                "default": "textures/entity/cursed_arrow_marker"
+            },
+
+            "render_controllers": [
+                "controller.render.cursed_arrow_marker"
+            ]
+
+
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.necromancer": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "summon": "query.skin_id == 2" }
+                    ]
+                },
+                "summon": {
+                    "animations": [
+                        "summon"
+                    ],
+                    "transitions": [
+                        { "default": "query.skin_id == 0" }
+                    ]
+                }
+            }
+        }
+    }
+}

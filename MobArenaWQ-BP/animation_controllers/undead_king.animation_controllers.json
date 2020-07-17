@@ -1,0 +1,74 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.undead_king.battle": {
+            "initial_state": "next_attack_cursed_arise",
+            "states": {
+                "next_attack_cursed_arise": {
+                    "animations": [
+                        "next_attack_cursed_arise"
+                    ],
+                    "transitions": [
+                        { "attack_cursed_arise": "query.skin_id == 1" }
+                    ]
+                },
+                "attack_cursed_arise": {
+                    "animations": [
+                        "attack_cursed_arise"
+                    ],
+                    "transitions": [
+                        { "next_attack_perish": "query.skin_id == 2" }
+                    ]
+                },
+                "next_attack_perish": {
+                    "animations": [
+                        "next_attack_perish"
+                    ],
+                    "transitions": [
+                        { "attack_perish": "query.skin_id == 3" }
+                    ]
+                },
+                "attack_perish": {
+                    "animations": [
+                        "attack_perish"
+                    ],
+                    "transitions": [
+                        { "next_attack_royal_arise": "query.skin_id == 4" }
+                    ]
+                },
+                "next_attack_royal_arise": {
+                    "animations": [
+                        "next_attack_royal_arise"
+                    ],
+                    "transitions": [
+                        { "attack_royal_arise": "query.skin_id == 5" }
+                    ]
+                },
+                "attack_royal_arise": {
+                    "animations": [
+                        "attack_royal_arise"
+                    ],
+                    "transitions": [
+                        { "next_attack_writh": "query.skin_id == 6" }
+                    ]
+                },
+                "next_attack_writh": {
+                    "animations": [
+                        "next_attack_writh"
+                    ],
+                    "transitions": [
+                        { "attack_writh": "query.skin_id == 7" }
+                    ]
+                },
+                "attack_writh": {
+                    "animations": [
+                        "attack_writh"
+                    ],
+                    "transitions": [
+                        { "next_attack_cursed_arise": "query.skin_id == 0" }
+                    ]
+                }
+            }
+        }
+    }
+}

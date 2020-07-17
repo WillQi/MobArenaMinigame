@@ -1,0 +1,21 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player_view": {
+            "initial_state": "alive",
+            "states": {
+                "alive": {
+                    "transitions": [
+                        { "dead": "!query.is_alive" }
+                    ]
+                },
+                "dead": {
+                    "on_entry": [
+                        "/scoreboard players add \"§eYour Gold§r \" player_view 1",
+                        "/scoreboard players add @p kills 1"
+                    ]
+                }
+            }
+        }
+    }
+}

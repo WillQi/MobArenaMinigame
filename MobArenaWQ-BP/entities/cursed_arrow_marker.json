@@ -1,0 +1,29 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:cursed_arrow_marker",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": true,
+            "animations": {
+                "summon": "animation.cursed_arrow_marker"
+            },
+            "scripts": {
+                "animate": [
+                    "summon"
+                ]
+            }
+        },
+
+        "components": {
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "deals_damage": false
+                    }
+                ]
+            }
+        }
+    }
+}

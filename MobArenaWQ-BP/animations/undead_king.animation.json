@@ -1,0 +1,145 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.undead_king.next_attack_cursed_arise": {
+            "animation_length": 46,
+            "loop": false,
+            "timeline": {
+                "45.0": [
+                    "@s mobarenawq:attack_cursed_arise"
+                ]
+            }
+        },
+
+        "animation.undead_king.attack_cursed_arise": {
+            "animation_length": 10,
+            "loop": false,
+            "timeline": {
+                "2.0": [
+                    "/tellraw @a {\"rawtext\": [{\"text\": \"<§cMobArena§f> §cARISE AND SERVE YOUR KING\"}]}",
+                    "/particle mobarenawq:modified_lava_particle -9 9 14",
+                    "/particle mobarenawq:modified_lava_particle -8 6 -12",
+                    "/particle mobarenawq:modified_lava_particle -8 6 -3",
+                    "/particle mobarenawq:modified_lava_particle -8 5 5",
+                    "/particle mobarenawq:modified_lava_particle 1 5 -1",
+                    "/particle mobarenawq:modified_lava_particle 12 5 -15",
+                    "/particle mobarenawq:modified_lava_particle 14 5 15"
+                ],
+                "6.2": [
+                    "/particle minecraft:large_explosion -9 9 14",
+                    "/particle minecraft:large_explosion -8 6 -12",
+                    "/particle minecraft:large_explosion -8 6 -3",
+                    "/particle minecraft:large_explosion -8 5 5",
+                    "/particle minecraft:large_explosion 1 5 -1",
+                    "/particle minecraft:large_explosion 12 5 -15",
+                    "/particle minecraft:large_explosion 14 5 15",
+                    "/summon mobarenawq:unholy_archer -9 9 14",
+                    "/summon mobarenawq:unholy_archer -8 6 -12",
+                    "/summon mobarenawq:unholy_zombie -8 6 -3",
+                    "/summon mobarenawq:unholy_zombie -8 5 5",
+                    "/summon mobarenawq:unholy_zombie 1 5 -1",
+                    "/summon mobarenawq:cursed_necromancer 12 5 -15",
+                    "/summon mobarenawq:cursed_necromancer 14 5 15"
+                ],
+                "9.5": [
+                    "@s mobarenawq:next_attack_perish"
+                ]
+            }
+        },
+
+        "animation.undead_king.next_attack_perish": {
+            "animation_length": 31,
+            "loop": false,
+            "timeline": {
+                "30.0": [
+                    "@s mobarenawq:attack_perish"
+                ]
+            }
+        },
+
+        "animation.undead_king.attack_perish": {
+            "animation_length": 6,
+            "loop": false,
+            "timeline": {
+                "2.3": [
+                    "/tellraw @a {\"rawtext\": [{\"text\": \"<§cMobArena§f> §cYOUR LIVES ARE MEANINGLESS. ACCEPT YOUR FATE\"}]}",
+                    "/execute @a[tag=alive] ~ ~ ~ summon mobarenawq:cursed_arrow_marker"
+                ],
+                "5.2": [
+                    "@s mobarenawq:next_attack_royal_arise"
+                ]
+            }
+        },
+
+        "animation.undead_king.next_attack_royal_arise": {
+            "animation_length": 16,
+            "loop": false,
+            "timeline": {
+                "15.0": [
+                    "@s mobarenawq:attack_royal_arise"
+                ]
+            }
+        },
+
+        "animation.undead_king.attack_royal_arise": {
+            "animation_length": 10,
+            "loop": false,
+            "timeline": {
+                "2.0": [
+                    "/tellraw @a {\"rawtext\": [{\"text\": \"<§cMobArena§f> §cARISE AND SACRIFICE YOUR LIVES\"}]}",
+                    "/particle mobarenawq:modified_evoker_spell -9 9 14",
+                    "/particle mobarenawq:modified_evoker_spell -8 6 -12",
+                    "/particle mobarenawq:modified_evoker_spell -8 6 -3",
+                    "/particle mobarenawq:modified_evoker_spell -8 5 5",
+                    "/particle mobarenawq:modified_evoker_spell 1 5 -1",
+                    "/particle mobarenawq:modified_evoker_spell 12 5 -15",
+                    "/particle mobarenawq:modified_evoker_spell 14 5 15"
+                ],
+                "6.2": [
+                    "/particle minecraft:large_explosion -9 9 14",
+                    "/particle minecraft:large_explosion -8 6 -12",
+                    "/particle minecraft:large_explosion -8 6 -3",
+                    "/particle minecraft:large_explosion -8 5 5",
+                    "/particle minecraft:large_explosion 1 5 -1",
+                    "/particle minecraft:large_explosion 12 5 -15",
+                    "/particle minecraft:large_explosion 14 5 15",
+                    "/summon mobarenawq:royal_archer -9 9 14",
+                    "/summon mobarenawq:royal_archer -8 6 -12",
+                    "/summon mobarenawq:royal_knight -8 6 -3",
+                    "/summon mobarenawq:royal_knight -8 5 5",
+                    "/summon mobarenawq:royal_knight 1 5 -1",
+                    "/summon mobarenawq:necromancer 12 5 -15",
+                    "/summon mobarenawq:necromancer 14 5 15"
+                ],
+                "9.5": [
+                    "@s mobarenawq:next_attack_writh"
+                ]
+            }
+        },
+
+        "animation.undead_king.next_attack_writh": {
+            "animation_length": 21,
+            "loop": false,
+            "timeline": {
+                "20.0": [
+                    "@s mobarenawq:attack_writh"
+                ]
+            }
+        },
+
+        "animation.undead_king.attack_writh": {
+            "animation_length": 6,
+            "loop": false,
+            "timeline": {
+                "2.6": [
+                    "/tellraw @a {\"rawtext\": [{\"text\": \"<§cMobArena§f> §cHOW DARE YOU TOUCH ME\"}]}",
+                    "@s mobarenawq:add_knockback_attack"
+                ],
+                "5.2": [
+                    "@s mobarenawq:remove_knockback_attack",
+                    "@s mobarenawq:next_attack_cursed_arise"
+                ]
+            }
+        }
+    }
+}

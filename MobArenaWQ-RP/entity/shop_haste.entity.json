@@ -1,0 +1,26 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mobarenawq:shop_haste",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/shop/haste"
+            },
+            "geometry": {
+                "default": "geometry.haste"
+            },
+            "render_controllers": [
+                "controller.render.shop"
+            ],
+            "animations": {
+                "idle": "animation.haste.idle"
+            },
+            "animation_controllers": [
+                { "idle": "controller.animation.shop" }
+            ]
+        }
+    }
+}

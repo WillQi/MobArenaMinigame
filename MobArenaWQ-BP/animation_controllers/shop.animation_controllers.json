@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.shop": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "transitions": [
+                        { "purchase": "query.skin_id == 1" }
+                    ]
+                },
+                "purchase": {
+                    "animations": [
+                        "purchase"
+                    ],
+                    "transitions": [
+                        { "idle": "query.skin_id == 0" }
+                    ]
+                }
+            }
+        }
+    }
+}

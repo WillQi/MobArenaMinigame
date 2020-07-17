@@ -1,0 +1,141 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:skeleton_archer",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": true,
+            "animations": {
+                "rider_controller": "controller.animation.rider",
+                "player_view": "controller.animation.player_view"
+            },
+            "scripts": {
+                "animate": [
+                    "rider_controller",
+                    "player_view"
+                ]
+            }
+        },
+
+        "component_groups": {
+            "run_away": {
+                "minecraft:behavior.avoid_mob_type": {
+                    "priority": 0,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_tag",
+                                        "subject": "other",
+                                        "value": "alive"
+                                    }
+                                ]
+                            },
+                            "sprint_speed_multiplier": 1.5,
+                            "walk_speed_multiplier": 1.5
+                        }
+                    ],
+                    "max_dist": 5
+                }
+            }
+        },
+        
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "mobarenawq:rider",
+                    "mobarenawq:necromancer_summon"
+                ]
+            },
+            "minecraft:physics": {},
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:movement": {
+                "value": 0.25
+            },
+            "minecraft:equipment": {
+                "table": "loot_tables/entities/skeleton_archer.json"
+            },
+            "minecraft:movement.generic": {},
+            "minecraft:navigation.walk": {},
+            "minecraft:can_climb": {},
+            "minecraft:jump.static": {},
+            "minecraft:shooter": {
+                "def": "mobarenawq:modified_arrow"
+            },
+
+            "minecraft:behavior.ranged_attack": {
+                "priority": 1,
+                "attack_interval_min": 2,
+                "attack_interval_max": 3,
+                "attack_radius": 15
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "entity_types": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_tag",
+                                    "subject": "other",
+                                    "value": "alive"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                }
+                            ]
+                        },
+                        "max_dist": 16
+                    }
+                ],
+                "must_see": true,
+                "priority": 2
+            },
+            "minecraft:behavior.find_mount": {
+                "priority": 3,
+                "within_radius": 16
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 4,
+                "interval": 120
+            }
+        },
+
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "run_away"
+                    ]
+                }
+            },
+
+            "mobarenawq:found_mount": {
+                "remove": {
+                    "component_groups": [
+                        "run_away"
+                    ]
+                }
+            },
+
+            "mobarenawq:lost_mount": {
+                "add": {
+                    "component_groups": [
+                        "run_away"
+                    ]
+                }
+            }
+        }
+    }
+}

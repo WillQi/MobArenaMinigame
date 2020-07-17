@@ -1,0 +1,26 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mobarenawq:shop_sharpness",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/entity/shop/sharpness"
+            },
+            "geometry": {
+                "default": "geometry.sharpness"
+            },
+            "render_controllers": [
+                "controller.render.shop"
+            ],
+            "animations": {
+                "idle": "animation.sharpness.idle"
+            },
+            "animation_controllers": [
+                { "idle": "controller.animation.shop" }
+            ]
+        }
+    }
+}

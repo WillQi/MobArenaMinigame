@@ -1,0 +1,31 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "mobarenawq:unholy_arrow",
+            "is_summonable": true,
+            "is_spawnable": false,
+            "is_experimental": true
+        },
+        "components": {
+            "minecraft:projectile": {
+                "catch_fire": true,
+                "destroy_on_hurt": true,
+                "knockback": true,
+                "hit_sound": "bow.hit",
+                "on_fire_time": 3,
+                "power": 1.6,
+                "gravity": 0.05,
+                "on_hit": {
+                    "impact_damage": {
+                        "filter": "player",
+                        "damage": 2.5,
+                        "knockback": true
+                    },
+                    "remove_on_hit": {},
+                    "particle_on_hit": {}
+                }
+            }
+        }
+    }
+}

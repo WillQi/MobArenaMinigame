@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.rider": {
+            "initial_state": "not_riding",
+            "states": {
+                "not_riding": {
+                    "on_entry": [
+                        "@s mobarenawq:lost_mount"
+                    ],
+                    "transitions": [
+                        { "riding": "query.is_riding" }
+                    ]
+                },
+                "riding": {
+                    "on_entry": [
+                        "@s mobarenawq:found_mount"
+                    ],
+                    "transitions": [
+                        { "not_riding": "!query.is_riding" }
+                    ]
+                }
+            }
+        }
+    }
+}

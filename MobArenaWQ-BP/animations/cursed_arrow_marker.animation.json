@@ -1,0 +1,103 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.cursed_arrow_marker": {
+            "animation_length": 5,
+            "loop": false,
+            "timeline": {
+                "0.0": [
+                    "/effect @s invisibility 6 1 true",
+                    "/tp ~ ~10 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~1"
+                ],
+                "0.5": [
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~1"
+                ],
+                "1.0": [
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~1"
+                ],
+                "1.5": [
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~1"
+                ],
+                "2.0": [
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~1"
+                ],
+                "2.5": [
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~1",
+                    "/particle minecraft:redstone_wire_dust_particle ~-1 ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~-1",
+                    "/particle minecraft:redstone_wire_dust_particle ~ ~-9 ~1"
+                ],
+                "3.0": [
+                    
+                    "/summon mobarenawq:unholy_arrow ~ ~-1 ~",
+                    "/summon mobarenawq:unholy_arrow ~1 ~-1 ~1",
+                    "/summon mobarenawq:unholy_arrow ~1 ~-1 ~-1",
+                    "/summon mobarenawq:unholy_arrow ~1 ~-1 ~",
+                    "/summon mobarenawq:unholy_arrow ~-1 ~-1 ~",
+                    "/summon mobarenawq:unholy_arrow ~-1 ~-1 ~1",
+                    "/summon mobarenawq:unholy_arrow ~-1 ~-1 ~-1",
+                    "/summon mobarenawq:unholy_arrow ~ ~-1 ~-1",
+                    "/summon mobarenawq:unholy_arrow ~ ~-1 ~1"
+                ],
+                "4.0": [
+                    "/summon mobarenawq:unholy_arrow ~ ~-1 ~",
+                    "/summon mobarenawq:unholy_arrow ~1 ~-1 ~1",
+                    "/summon mobarenawq:unholy_arrow ~1 ~-1 ~-1",
+                    "/summon mobarenawq:unholy_arrow ~1 ~-1 ~",
+                    "/summon mobarenawq:unholy_arrow ~-1 ~-1 ~",
+                    "/summon mobarenawq:unholy_arrow ~-1 ~-1 ~1",
+                    "/summon mobarenawq:unholy_arrow ~-1 ~-1 ~-1",
+                    "/summon mobarenawq:unholy_arrow ~ ~-1 ~-1",
+                    "/summon mobarenawq:unholy_arrow ~ ~-1 ~1",
+                    "/kill @s"
+                ]
+            }
+        }
+    }
+}

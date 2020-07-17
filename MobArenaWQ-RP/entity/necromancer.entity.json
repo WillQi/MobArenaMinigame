@@ -1,0 +1,33 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "mobarenawq:necromancer",
+            "materials": {
+                "default": "skeleton"
+            },
+            "textures": {
+                "default": "textures/entity/necromancer/regular"
+            },
+            "geometry": {
+                "default": "geometry.necromancer"
+            },
+            "render_controllers": [
+                "controller.render.necromancer"
+            ],
+            "scripts": {
+                "pre_animation": [
+                    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+                ]
+            },
+            "animation_controllers": [
+                { "summon": "controller.animation.necromancer" },
+                { "move": "controller.animation.humanoid.move" }
+            ],
+            "animations": {
+                "summon": "animation.necromancer.summon",
+                "move": "animation.humanoid.move"
+            }
+        }
+    }
+}
