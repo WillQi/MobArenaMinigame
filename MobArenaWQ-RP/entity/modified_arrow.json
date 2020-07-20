@@ -16,7 +16,7 @@
                 "controller.render.arrow"
             ],
             "animations": {
-                "move": "animation.arrow"
+                "move": "animation.arrow.move"
             },
             "scripts": {
                 "pre_animation": [
