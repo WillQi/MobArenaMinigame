@@ -11,8 +11,7 @@
                 },
                 "dead": {
                     "on_entry": [
-                        "/scoreboard players add \"§eYour Gold§r \" player_view 1",
-                        "/scoreboard players add @p kills 1"
+                        "/scoreboard players add \"§eYour Gold§r \" player_view 1"
                     ]
                 }
             }

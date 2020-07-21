@@ -9,8 +9,12 @@ scoreboard players set "current_round" round_data 0
 scoreboard players set "temp" round_data 0
 scoreboard players set "ten" round_data 10
 
+scoreboard objectives add spawn_location dummy spawn_location
+scoreboard players random @a[tag=root] spawn_location 1 4
+
 # Mark game as started
 setblock 1000 11 1003 redstone_block
+setblock 976 9 975 dispenser 4
 
 tag @a add alive
 
